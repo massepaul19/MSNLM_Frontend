@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.room {
+    display: flex;
+    flex-wrap: wrap;
+    background: #cce9df;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room img {
+    width: 200%;
+    max-width: 200px;
+    height: auto;
+}
+
+.room-info {
+    flex: 1;
+    padding: 15px;
+}
+
+.room-info h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+.room-info p {
+    margin: 10px 0;
+}
+
+.room-info .details {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+.room-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.room-info a:hover {
+    background: #0056b3;
+}
+
+/* Barre de recherche */
+#search-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-group button {
+    background: #007BFF;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background: #0056b3;
+}
+
+.input-group button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

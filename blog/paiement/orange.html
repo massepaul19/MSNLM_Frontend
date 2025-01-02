@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Money</title>
+    <link rel="stylesheet" href="static/styles_payement_om.css">
+</head>
+<body>
+    <div class="form-container">
+        <img src="static/logo_orange.png" alt="Orange Money Logo" width="100">
+        <h1>Orange Money (OM)</h1>
+        <form method="POST" action="{{ url_for('execute_ussd_om') }}">
+            <div class="form-group">
+                <label for="montant">Montant à envoyer (CFA)</label>
+                <input type="number" id="montant" name="montant" placeholder="Entrez le montant" required>
+            </div>
+
+            <div class="form-group">
+                <label for="om-number">Numéro Orange Money</label>
+                <input type="text" id="om-number" name="om-number" placeholder="Entrez le numéro Orange Money" required>
+            </div>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <p>Envoyer de l'argent via Orange Money</p>
+        <p>- Composez #150# pour plus d'informations</p>
+    </div>
+</body>
+</html>

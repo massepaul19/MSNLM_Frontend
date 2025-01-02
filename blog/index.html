@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="fr" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Salford & MSNLM sarl">
+    <title>Blog Template · Bootstrap v5.3</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+ <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #4ad121;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+	
+	       <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="lime" aria-pressed="false">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#palette-fill"></use></svg>
+            Vert Citron
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    
+    
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
+  </symbol>
+  <symbol id="cart" viewBox="0 0 16 16">
+    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+  <symbol id="chevron-right" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+  </symbol>
+</svg>
+
+
+<div class="container">
+  <header class="border-bottom lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <img src="logo.png" alt="Logo" class="logo" style="height: 60px;">
+      </div>
+      <div class="col-4 text-center">
+        <span class="blog-header-logo text-body-emphasis text-decoration-none">Salford & MSNLM sarl</span>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="btn btn-sm btn-outline-secondary me-2" href="options/register.html">Sing in</a>
+        <a class="btn btn-sm btn-outline-secondary" href="options/login.html">Sing up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-3 border-bottom">
+    <nav class="nav nav-underline justify-content-between">
+      <a class="nav-item nav-link link-body-emphasis active" href="index.html">Accueil</a>
+      <a class="nav-item nav-link link-body-emphasis" href="options/actualites.html">Actualités</a>
+      <a class="nav-item nav-link link-body-emphasis" href="options/informations.html">Informations</a>
+      <a class="nav-item nav-link link-body-emphasis" href="./options/nos_services.html">Nos Services</a>
+      <a class="nav-item nav-link link-body-emphasis" href="./options/a_propos.html">A propos de Nous</a>
+      <a class="nav-item nav-link link-body-emphasis" href="paiement/index.html">Mode Paiement</a>
+      <a class="nav-item nav-link link-body-emphasis" href="options/add_room.html">Ajouter une Chambre</a>
+      <a class="nav-item nav-link link-body-emphasis" href="./options/contacter_nous.html">Contacter Nous</a>
+      <a class="nav-item nav-link link-body-emphasis" href="./options/settings.html">settings</a>
+    </nav>
+  </div>
+</div>
+
+<!--A propos de Nous Accueil-->
+
+
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary d-flex justify-content-between align-items-center">
+    <div class="col-lg-8 px-0">
+      <h1 class="display-4 fst-italic">MSNLM Sarl Service de Logement</h1>
+      <h3>
+        Notre Histoire
+      </h3>
+      <p class="lead my-3">
+        Fondée en 2020, notre entreprise s'engage à offrir des solutions de logement de qualité aux étudiants.       
+      </p>
+      <p class="lead mb-0">
+        <a href="./options/a_propos.html" class="text-body-emphasis fw-bold" >Continue reading...</a>
+      </p>
+    </div>
+    <div class="col-lg-4 text-end">
+      <img src="logo.png" alt="logo" style="max-height: 400px; max-width: 100%; object-fit: contain;" class="logo">
+    </div>
+  </div>
+
+
+
+<!-- Proposition des Chambres -->
+
+<div class="row mb-2">
+  <h3 class="pb-4 mb-4 fst-italic border-bottom">
+    Chambres Disponibles
+  </h3>
+
+  <!-- Chambre 1 -->
+
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <h3 class="mb-0">Chambre 1</h3>
+        <strong class="d-inline-block mb-2 text-primary-emphasis">Description: 5m X 5m</strong>
+        <div class="mb-1 text-body-secondary">Melen</div>
+        <p class="card-text mb-auto">
+          <li>
+            Plafon, cuisine, douche
+            <h4>Prix : 25000F / mois</h4>
+          </li>
+        </p>
+        <a href="./chambres/chambre1/chambre1.html" class="icon-link gap-1 icon-link-hover stretched-link">
+          Voir plus
+        </a>        
+      </div>
+      <div class="col-auto d-none d-lg-block position-relative">
+        <!-- Image de la chambre -->
+        <img src="chambres/chambre1/2.jpeg" alt="Chambre 1" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+        <!-- Bon prix !!! overlay -->
+        <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+          Bon prix !!!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chambre 2 -->
+
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <h3 class="mb-0">Chambre 2</h3>
+            <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 6m x 5m</strong>
+            <div class="mb-1 text-body-secondary">Etoudi</div>
+            <p class="card-text mb-auto">
+                <ul>
+                    <li>Plafond , Cuisine</li>
+                    <li>Douche , Parking</li>
+                </ul>
+                <h4>Prix : 30 000 F / mois</h4>
+            </p>
+            <a href="chambres/chambre2/chambre2.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                Voir plus
+            </a>
+        </div>
+        <div class="col-auto d-none d-lg-block position-relative">
+            <img src="chambres/chambre2/3.jpeg" alt="Chambre 2" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+            <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                Bon prix !!!
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+  <!-- Chambre 3 -->
+  <div class="col-md-6 chambre-card">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Chambre 3</h3>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 4m x 4m</strong>
+              <div class="mb-1 text-body-secondary">Cité Universitaire</div>
+              <ul class="card-text mb-auto">
+                  <li>Toilette externe</li>
+              </ul>
+              <h4>Prix : 15 000 F / mois</h4>
+              <a href="./chambres/chambre3/chambre3.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Voir plus
+              </a>
+          </div>
+          <div class="col-auto d-none d-lg-block position-relative">
+              <img src="chambres/chambre3/1.jpeg" alt="Chambre 3" class="img-fluid chambre-img" style="width: 200px; height: 250px; object-fit: cover;">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                  Bon prix !!!
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chambre 4 -->
+  <div class="col-md-6 chambre-card">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Chambre 4</h3>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 3m x 4m</strong>
+              <div class="mb-1 text-body-secondary">Quartier Résidentiel</div>
+              <ul class="card-text mb-auto">
+                  <li>Toilette interne</li>
+              </ul>
+              <h4>Prix : 20 000 F / mois</h4>
+              <a href="./chambres/chambre4/chambre4.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Voir plus
+              </a>
+          </div>
+          <div class="col-auto d-none d-lg-block position-relative">
+              <img src="chambres/chambre4/2.jpeg" alt="Chambre 4" class="img-fluid chambre-img" style="width: 200px; height: 250px; object-fit: cover;">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                  Idéal pour étudiant !
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <!-- Chambre 5 -->
+  <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Chambre 5</h3>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 4m x 3m</strong>
+              <div class="mb-1 text-body-secondary">Bonass</div>
+              <p class="card-text mb-auto">
+                  <li>Douche externe, espace calme</li>
+                  <h4>Prix : 18 000F / mois</h4>
+              </p>
+              <a href="./chambres/chambre5/chambre5.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Voir plus
+              </a>
+          </div>
+          <div class="col-auto d-none d-lg-block position-relative">
+              <img src="chambres/chambre5/1.jpeg" alt="Chambre 5" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                  Offre limitée !
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chambre 6 -->
+  <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Chambre 6</h3>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 5m x 4m</strong>
+              <div class="mb-1 text-body-secondary">Obili</div>
+              <p class="card-text mb-auto">
+                  <li>Douche interne, connexion Wi-Fi incluse</li>
+                  <h4>Prix : 25 000F / mois</h4>
+              </p>
+              <a href="./chambres/chambre6/chambre6.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Voir plus
+              </a>
+          </div>
+          <div class="col-auto d-none d-lg-block position-relative">
+              <img src="chambres/chambre6/1.jpeg" alt="Chambre 6" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                  Wi-Fi gratuit !
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Chambre 7 -->
+  <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Chambre 7</h3>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 6m x 6m</strong>
+              <div class="mb-1 text-body-secondary">Cité-Sic</div>
+              <p class="card-text mb-auto">
+                  <li>Cuisine équipée, salle de bain privée</li>
+                  <h4>Prix : 35 000F / mois</h4>
+              </p>
+              <a href="./chambres/chambre7/chambre7.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Voir plus
+              </a>
+          </div>
+          <div class="col-auto d-none d-lg-block position-relative">
+              <img src="chambres/chambre7/1.jpeg" alt="Chambre 7" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                  Confort assuré !
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Chambre 8 -->
+  <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+              <h3 class="mb-0">Chambre 8</h3>
+              <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 3.5m x 4m</strong>
+              <div class="mb-1 text-body-secondary">poste-centrale</div>
+              <p class="card-text mb-auto">
+                  <li>Proximité commerces, environnement paisible</li>
+                  <h4>Prix : 22 000F / mois</h4>
+              </p>
+              <a href="./chambres/chambre8/chambre8.html" class="icon-link gap-1 icon-link-hover stretched-link">
+                  Voir plus
+              </a>
+          </div>
+          <div class="col-auto d-none d-lg-block position-relative">
+              <img src="chambres/chambre8/1.jpeg" alt="Chambre 8" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+              <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+                  Cadre idéal !
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Chambre 9 -->
+<div class="col-md-6">
+  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">Chambre 9</h3>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 6m x 5m</strong>
+          <div class="mb-1 text-body-secondary">Bastos</div>
+          <p class="card-text mb-auto">
+              <ul>
+                  <li>Plafond, Cuisine, Balcon</li>
+                  <li>Douche, Parking</li>
+              </ul>
+              <h4>Prix : 35 000 F / mois</h4>
+          </p>
+          <a href="chambres/chambre9/chambre9.html" class="icon-link gap-1 icon-link-hover stretched-link">
+              Voir plus
+          </a>
+      </div>
+      <div class="col-auto d-none d-lg-block position-relative">
+          <img src="chambres/chambre9/1.jpeg" alt="Chambre 9" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+          <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+              Nouvelle !
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Chambre 10 -->
+<div class="col-md-6">
+  <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0">Chambre 10</h3>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">Description : 7m x 6m</strong>
+          <div class="mb-1 text-body-secondary">Tsinga</div>
+          <p class="card-text mb-auto">
+              <ul>
+                  <li>Plafond, Cuisine équipée, Douche, Parking sécurisé</li>
+                  <li>Internet haut débit</li>
+              </ul>
+              <h4>Prix : 40 000 F / mois</h4>
+          </p>
+          <a href="chambres/chambre10/chambre10.html" class="icon-link gap-1 icon-link-hover stretched-link">
+              Voir plus
+          </a>
+      </div>
+      <div class="col-auto d-none d-lg-block position-relative">
+          <img src="chambres/chambre10/1.jpeg" alt="Chambre 10" class="bd-placeholder-img img-fluid" style="width: 200px; height: 250px; object-fit: cover;">
+          <div class="position-absolute top-50 start-50 translate-middle text-white fw-bold bg-dark bg-opacity-50 px-2 py-1 rounded">
+              Élite !
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Bouton pour voir toutes les chambres -->
+
+  <p class="lead mb-4 text-center">
+    <a href="./chambres/chambre.html" class="btn btn-primary fw-bold">Voir Toutes les chambres et faire des Recherches selon le prix</a>
+  </p>
+
+  <!-- Barre de recherche -->
+  <div class="col-6 mx-auto">
+    <form action="#" method="get" class="d-flex">
+      <div class="input-group">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Rechercher une chambre..." 
+          name="query" 
+          required>
+        <button class="btn btn-outline-secondary" type="submit">Rechercher</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<div class="row g-5">
+    <div class="col-md-8">
+        <!-- Section: Informations -->
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Informations
+        </h3>
+        <article class="blog-post">
+            <h2 class="display-5 link-body-emphasis mb-1">Suivre les instructions</h2>
+            <h4>Comment réserver une chambre ?</h4>
+            <p class="lead my-3">Connectez-vous, explorez nos options, et cliquez sur "Réserver".</p>
+            <h4>Quels sont les moyens de paiement acceptés ?</h4>
+            <p class="lead mb-0">
+                <a href="./options/informations.html" class="text-body-emphasis fw-bold">Continue reading...</a>
+            </p>
+        </article>
+    </div>
+</div>
+
+<div class="row g-5">
+    <div class="col-md-8">
+        <!-- Section: Nos Services -->
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Nos Services
+        </h3>
+        <article class="blog-post">
+            <h2>Options de logement</h2>
+            <ul>
+                <li>Chambres meublées</li>
+                <li>Studios étudiants</li>
+                <li>Appartements partagés</li>
+            </ul>
+            <p class="lead mb-0">
+                <a href="./options/nos_services.html" class="text-body-emphasis fw-bold">Continue reading...</a>
+            </p>
+        </article>
+    </div>
+</div>
+
+<div class="row g-5">
+  <div class="col-md-8">
+      <!-- Section: Contactez-nous -->
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Contactez-nous
+      </h3>
+      <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Nous sommes là pour vous aider</h2>
+          <p class="lead my-3">
+              Pour toute question ou assistance, n'hésitez pas à nous contacter. Nos équipes se feront un plaisir de vous répondre dans les plus brefs délais.
+          </p>
+          <h4>Nos coordonnées :</h4>
+          <ul>
+              <li><strong>Adresse :</strong> 123 Rue cité Universitaire, Ngoa Ekele, Cameroun</li>
+              <li><strong>Téléphone :</strong> +237 681 43 49 03</li>
+              <li><strong>Email :</strong> contact@notresite.com</li>
+          </ul>
+          <h4>Formulaire de contact :</h4>
+          <form action="/envoyer_message" method="post">
+              <div class="mb-3">
+                  <label for="nom" class="form-label">Votre nom</label>
+                  <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez votre nom" required>
+              </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Votre email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre email" required>
+              </div>
+              <div class="mb-3">
+                  <label for="message" class="form-label">Votre message</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Entrez votre message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+      </article>
+  </div>
+</div>
+
+
+</main>
+
+<footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+  <p>&copy; 2024 Salford & MSNLM Sarl. Tous droits réservés.</p>
+  <p>Plus d'informations Email: <a href="paolocisse6@gmail.com">Email MSNLM</a> Telephone: <a href="+237 681434903">+237 681434903</a>.</p>
+  <p class="mb-0">
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+

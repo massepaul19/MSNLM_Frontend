@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambres Disponibles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Liste des Chambres Disponibles</h1> 
+
+        <!-- Barre de recherche -->
+        <div class="col-6 mx-auto my-4">
+            <form id="search-form" class="d-flex">
+                <div class="input-group">
+                    <input 
+                        type="number" 
+                        class="form-control" 
+                        placeholder="Rechercher une chambre par prix en F CFA..." 
+                        id="query" 
+                        required 
+                        aria-label="Rechercher une chambre par prix">
+                    <button 
+                        class="btn btn-outline-secondary" 
+                        type="submit">
+                        Rechercher
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Chambres -->
+        <div id="rooms-container">
+            <div class="room" data-price-fcfa="25000">
+                <img src="chambre1/1.jpeg" alt="Chambre 1">
+                <div class="room-info">
+                    <h2>Chambre 1</h2>
+                    <p>Située à Melen, cette chambre offre un accès facile aux commodités locales.</p>
+                    <p class="details">Lieu : Melen | Prix : 25 000 F / mois</p>
+                    <a href="chambre1/chambre1.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="30000">
+                <img src="chambre2/3.jpeg" alt="Chambre 2">
+                <div class="room-info">
+                    <h2>Chambre 2</h2>
+                    <p>Une chambre spacieuse avec plafond, cuisine, douche et parking.</p>
+                    <p class="details">Lieu : Etoudi | Prix : 30 000 F / mois</p>
+                    <a href="chambre2/chambre2.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="15000">
+                <img src="chambre3/1.jpeg" alt="Chambre 3">
+                <div class="room-info">
+                    <h2>Chambre 3</h2>
+                    <p>Proche de l'université, idéale pour les étudiants.</p>
+                    <p class="details">Lieu : Cité Universitaire | Prix : 15 000 F / mois</p>
+                    <a href="chambre3/chambre3.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="20000">
+                <img src="chambre4/2.jpeg" alt="Chambre 4">
+                <div class="room-info">
+                    <h2>Chambre 4</h2>
+                    <p>Confortable avec toilette interne, parfaite pour les étudiants.</p>
+                    <p class="details">Lieu : Quartier Résidentiel | Prix : 20 000 F / mois</p>
+                    <a href="chambre4/chambre4.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="18000">
+                <img src="chambre5/1.jpeg" alt="Chambre 5">
+                <div class="room-info">
+                    <h2>Chambre 5</h2>
+                    <p>Douche externe, située dans un espace calme.</p>
+                    <p class="details">Lieu : Bonass | Prix : 18 000 F / mois</p>
+                    <a href="chambre5/chambre5.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="25000">
+                <img src="chambre6/1.jpeg" alt="Chambre 6">
+                <div class="room-info">
+                    <h2>Chambre 6</h2>
+                    <p>Douche interne avec connexion Wi-Fi incluse.</p>
+                    <p class="details">Lieu : Obili | Prix : 25 000 F / mois</p>
+                    <a href="chambre6/chambre6.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="35000">
+                <img src="chambre7/1.jpeg" alt="Chambre 7">
+                <div class="room-info">
+                    <h2>Chambre 7</h2>
+                    <p>Cuisine équipée, salle de bain privée.</p>
+                    <p class="details">Lieu : Cité-Sic | Prix : 35 000 F / mois</p>
+                    <a href="chambre7/chambre7.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="22000">
+                <img src="chambre8/1.jpeg" alt="Chambre 8">
+                <div class="room-info">
+                    <h2>Chambre 8</h2>
+                    <p>Proximité commerces, environnement paisible.</p>
+                    <p class="details">Lieu : Poste-Centrale | Prix : 22 000 F / mois</p>
+                    <a href="chambre8/chambre8.html">Voir plus</a>
+                </div>
+            </div>
+
+            <!-- Ajout des autres chambres de 9 à 20 -->
+
+            <div class="room" data-price-fcfa="35000">
+                <img src="chambre9/1.jpeg" alt="Chambre 9">
+                <div class="room-info">
+                    <h2>Chambre 9</h2>
+                    <p>Plafond, Cuisine, Balcon, Douche, Parking.</p>
+                    <p class="details">Lieu : Bastos | Prix : 35 000 F / mois</p>
+                    <a href="chambre9/chambre9.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="40000">
+                <img src="chambre10/1.jpeg" alt="Chambre 10">
+                <div class="room-info">
+                    <h2>Chambre 10</h2>
+                    <p>Plafond, Cuisine équipée, Douche, Parking sécurisé, Internet haut débit.</p>
+                    <p class="details">Lieu : Tsinga | Prix : 40 000 F / mois</p>
+                    <a href="chambre10/chambre10.html">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="32000">
+                <img src="chambre11/1.jpeg" alt="Chambre 11">
+                <div class="room-info">
+                    <h2>Chambre 11</h2>
+                    <p>Cette chambre est située au centre-ville avec une vue imprenable sur la ville.</p>
+                    <p class="details">Lieu : Centre-ville | Prix : 32 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="28000">
+                <img src="chambre12/1.jpeg" alt="Chambre 12">
+                <div class="room-info">
+                    <h2>Chambre 12</h2>
+                    <p>Chambre spacieuse avec balcon, parfaite pour les soirées d'été.</p>
+                    <p class="details">Lieu : Proche du parc | Prix : 28 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+            <div class="room" data-price-fcfa="29000">
+                <img src="chambre13/1.jpeg" alt="Chambre 13">
+                <div class="room-info">
+                    <h2>Chambre 13</h2>
+                    <p>Située dans un quartier résidentiel calme, cette chambre est parfaite pour les étudiants et les jeunes professionnels.</p>
+                    <p class="details">Lieu : Quartier calme | Prix : 29 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 14 -->
+            <div class="room" data-price-fcfa="34000">
+                <img src="chambre14/1.jpeg" alt="Chambre 14">
+                <div class="room-info">
+                    <h2>Chambre 14</h2>
+                    <p>Offrant un grand espace de vie, cette chambre est idéale pour les familles.</p>
+                    <p class="details">Lieu : Quartier familial | Prix : 34 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 15 -->
+            <div class="room" data-price-fcfa="38000">
+                <img src="chambre15/1.jpeg" alt="Chambre 15">
+                <div class="room-info">
+                    <h2>Chambre 15</h2>
+                    <p>Chambre moderne avec toutes les commodités nécessaires.</p>
+                    <p class="details">Lieu : Vue sur la ville | Prix : 38 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 16 -->
+            <div class="room" data-price-fcfa="21000">
+                <img src="chambre16/1.jpeg" alt="Chambre 16">
+                <div class="room-info">
+                    <h2>Chambre 16</h2>
+                    <p>Option économique avec accès aux transports en commun.</p>
+                    <p class="details">Lieu : Quartier étudiant | Prix : 21 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 17 -->
+            <div class="room" data-price-fcfa="42000">
+                <img src="chambre17/1.jpeg" alt="Chambre 17">
+                <div class="room-info">
+                    <h2>Chambre 17</h2>
+                    <p>Chambre confortable avec une salle de bain privée.</p>
+                    <p class="details">Lieu : Résidence privée | Prix : 42 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 18 -->
+            <div class="room" data-price-fcfa="55000">
+                <img src="chambre18/1.jpeg" alt="Chambre 18">
+                <div class="room-info">
+                    <h2>Chambre 18</h2>
+                    <p>Idéale pour les familles avec un grand espace et un environnement paisible.</p>
+                    <p class="details">Lieu : Quartier familial | Prix : 55 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 19 -->
+            <div class="room" data-price-fcfa="29000">
+                <img src="chambre19/1.jpeg" alt="Chambre 19">
+                <div class="room-info">
+                    <h2>Chambre 19</h2>
+                    <p>Pratique pour les navetteurs, située près des transports en commun.</p>
+                    <p class="details">Lieu : Proche des transports | Prix : 29 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+            <!-- Chambre 20 -->
+            <div class="room" data-price-fcfa="62000">
+                <img src="chambre20/1.jpeg" alt="Chambre 20">
+                <div class="room-info">
+                    <h2>Chambre 20</h2>
+                    <p>Logement haut de gamme avec toutes les commodités modernes.</p>
+                    <p class="details">Lieu : Haut de gamme | Prix : 62 000 F / mois</p>
+                    <a href="#">Voir plus</a>
+                </div>
+            </div>
+    
+        </div>
+    
+        <script>
+            // Filtrer les chambres en fonction du prix
+            document.getElementById("search-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                const query = parseInt(document.getElementById("query").value, 10);
+                const rooms = document.querySelectorAll(".room");
+                const filteredRooms = [];
+                rooms.forEach(room => {
+                    const price = parseInt(room.getAttribute("data-price-fcfa"), 10);
+                    if (price <= query) {
+                        filteredRooms.push(room);
+                    }
+                });
+    
+                // Trier les chambres en fonction de la proximité du prix
+                filteredRooms.sort((a, b) => {
+                    const priceA = parseInt(a.getAttribute("data-price-fcfa"), 10);
+                    const priceB = parseInt(b.getAttribute("data-price-fcfa"), 10);
+                    return Math.abs(priceA - query) - Math.abs(priceB - query);
+                });
+    
+                // Afficher les chambres filtrées
+                const roomsContainer = document.getElementById("rooms-container");
+                roomsContainer.innerHTML = ""; // Effacer le contenu précédent
+                filteredRooms.forEach(room => {
+                    roomsContainer.appendChild(room);
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
