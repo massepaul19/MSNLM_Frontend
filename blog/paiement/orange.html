@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orange Money</title>
     <link rel="stylesheet" href="static/styles_payement_om.css">
+    <script>
+        function confirmerEnvoi() {
+            alert("Votre paiement via Orange Money a été envoyé avec succès !");
+        }
+    </script>
 </head>
 <body>
     <div class="form-container">
         <img src="static/logo_orange.png" alt="Orange Money Logo" width="100">
         <h1>Orange Money (OM)</h1>
-        <form method="POST" action="{{ url_for('execute_ussd_om') }}">
+        <form method="POST" action="execute_ussd_om.html" onsubmit="confirmerEnvoi()">
             <div class="form-group">
                 <label for="montant">Montant à envoyer (CFA)</label>
                 <input type="number" id="montant" name="montant" placeholder="Entrez le montant" required>

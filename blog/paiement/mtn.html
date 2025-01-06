@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTN Mobile Money</title>
     <link rel="stylesheet" href="static/styles_payement_mtn.css">
+    <script>
+        function confirmerEnvoi() {
+            alert("Votre paiement via MTN Mobile Money a été envoyé avec succès !");
+        }
+    </script>
 </head>
 <body>
     <div class="form-container">
         <img src="static/logo_mtn.png" alt="MTN Logo" width="100">
         <h1>MTN Mobile Money (MoMo)</h1>
-        <form method="POST" action="{{ url_for('execute_ussd') }}">
+        <form method="POST" action="execute_ussd_mtn.html" onsubmit="confirmerEnvoi()">
             <div class="form-group">
                 <label for="montant">Montant à envoyer (CFA)</label>
                 <input type="number" id="montant" name="montant" placeholder="Entrez le montant" required>
@@ -29,29 +34,3 @@
     </div>
 </body>
 </html>
-
-
-<!--
-{% extends "base.html" %}
-
-{% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='styles_payement_mtn.css') }}">
-{% endblock %}
-
-{% block content %}
-<div class="form-container">
-    <img src="{{ url_for('static', filename='mtn.png') }}" alt="MTN Logo" width="50">
-    <h1>MTN Mobile Money (MoMo)</h1>
-    <form method="POST" action="{{ url_for('execute_ussd') }}">
-        <div class="form-group">
-            <label for="montant">Montant à envoyer (CFA)</label>
-            <input type="number" id="montant" name="montant" placeholder="Entrez le montant" required>
-        </div>
-        <div class="form-group">
-            <label for="momo-number">Numéro MoMo</label>
-            <input type="text" id="momo-number" name="momo-number" placeholder="Entrez le numéro MoMo" required>
-        </div>
-        <button type="submit">Envoyer</button>
-    </form>
-</div>
-{% endblock %}
